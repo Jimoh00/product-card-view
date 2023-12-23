@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+
+    /* neutral colors */
+    --transparent-white: hsl(0, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+
+    /* typography */
+    --fz-regular: 15px;
+
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --ff-bigshoulders: 'Big Sholders Display', sans-serif;
+    --ff-lexend: 'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100svh;
+    padding-block: 5rem;
+    padding-inline: 8rem;
+}
+
+/* cta colors */
+.color-orange {
+    color: var(--orange);
+}
+
+.color-cyan {
+    color: var(--cyan);
+}
+
+.color-dark-cyan {
+    color: var(--dark-cyan);
+}
+
+/* card container */
+.card_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    padding: 3.4rem;
+    text-align: left;
+    color: var(--light-gray);
+}
+
+.card .img_header {
+    padding-block: 1.5rem;
+}
+
+.card .card_header {
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Big Sholders Display', sans-serif;
+}
+
+.card:first-child {
+    background: var(--orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card:nth-child(2) {
+    background: var(--cyan);
+}
+
+.card:last-child {
+    background: var(--dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card .card_content {
+    padding-right: 2rem;
+    font-size: var(--fz-regular);
+    line-height: 1.54rem;
+    font-family: var(--ff-lexend);
+}
+
+.card_cta {
+    border: 2px solid var(--light-gray);
+    background: var(--light-gray);
+    padding: 1rem;
+    margin-top: 4.5rem;
+    border-radius: 2rem;
+    width: 150px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-family: var(--ff-lexend);
+}
+
+.card_cta:hover {
+    color: var(--light-gray);
+    border: 2px solid var(--light-gray);
+    background: transparent;
+    transition: .2s;
+}
+
+/* mediaqueryies */
+@media(max-width: 35em) {
+    body {
+        padding-block: 3rem;
+        padding-inline: 1rem;
+    }
+
+    .card_container {
+        flex-direction: column;
+    }
+
+    .card:first-child {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .card:last-child {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+}
